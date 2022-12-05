@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taseen's Blog</title>
+    <style>
+
+h1,h2,h3,h4,h5,input,label,ul,li,a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gray;
+    text-decoration: none;
+    list-style-type: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    padding: 0 20px;
+    font-weight: 700;
+
+}
+
+form{
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 2px 20px #aaa;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+form h2{
+    text-transform: uppercase;
+}
+form input{
+    width: 100%;
+    padding: 5px 0;
+}
+
+form label{
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form button{
+    border: none;
+    background: #777;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+}
+
+.all-blogs{
+    width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.blog{
+    box-shadow: 0 2px 15px #ccc;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 50px;
+    margin-bottom: 50px;
+}
+
+.read-btn, .read-btn a{
+    border: none;
+    background: #777;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.edit-btn, .edit-btn a{
+    border: none;
+    background: rgb(3, 175, 242);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.delete-btn, .delete-btn a{
+    border: none;
+    background: rgb(168, 0, 0);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.container{
+    text-align: center;
+}
+
+.container h1{
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.container-read-blog{
+    width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 2px 20px #ccc;
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <h1><a href="/">Taseen's Blog</a></h1>
+
+        <ul>
+            <% if(user){ %>
+                <li><a href="/all-blogs">All Blogs</a></li>
+                <li><a href="/your-blogs">Your Blogs</a></li>
+                <li><a href="/share-blog">Share Blog</a></li>
+                <li><a href="/logout">Logout</a></li>
+
+            <% } else{ %>
+                <li><a href="/signup">Signup</a></li>
+                <li><a href="/login">Login</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</body>
+</html>
